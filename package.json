@@ -1,15 +1,25 @@
 {
-  "name": "webscrap",
+  "name": "asianfoodscraper",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anuarder/AsianFoodScraper.git"
+  },
+  "author": "Anuarder",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anuarder/AsianFoodScraper/issues"
+  },
+  "homepage": "https://github.com/Anuarder/AsianFoodScraper#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
     "request": "^2.88.0"
   }
 }
