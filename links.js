@@ -1,3 +1,5 @@
+
+
 let japanese = [
     'https://rasamalaysia.com/japanese-meat-and-potato-stew/',
     'https://rasamalaysia.com/shrimp-gyoza/',
@@ -182,3 +184,10 @@ let chinese = [
     'https://rasamalaysia.com/pumpkin-rice-noodles/',
     'https://rasamalaysia.com/shrimp-fried-rice/'
 ];
+
+module.exports = {
+    japanese: japanese,
+    korean: korean,
+    thai: thai,
+    chinese: chinese
+}
