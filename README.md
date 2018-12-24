@@ -1,3 +1,3 @@
 # AsianFoodScraper
 
-Скрапер для заполнения БД AsianYummi
+Скрапер для заполнения БД AsianFoood
