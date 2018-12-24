@@ -1,0 +1,24 @@
+ {
+ 	"title":"Garlic Butter Edamame",
+ 	"summary":"Garlic Butter Edamame – healthy edamame coated with garlicky and buttery goodness. The easiest appetizer you can whip up in 10 mins | rasamalaysia.com",
+ 	"img":"https://rasamalaysia.com/wp-content/uploads/2016/06/garlic-butter-edamame-thumb.jpg",
+ 	"time":"Total Time 10 minutes",
+ 	"ingredients":[
+ 		"Water for boiling",
+ 		"12 oz edamame",
+ 		"2 tablespoons salted butter",
+ 		"2 cloves garlic",
+ 		"Pinch of cayenne pepper",
+ 		"3 dashes ground black pepper",
+ 		"Pinch of kosher salt",
+ 		"Sesame seeds"
+ 	],
+ 	"instructions":[
+ 		"Bring a small pot of water to boil. Cook the edamame for 2-3 minutes. Drain and set aside.",
+ 		"Melt the salted butter by heating it up (you can heat it up in a microwave), then add the garlic, cayenne pepper and black pepper, stir to mix well.",
+ 		"Toss the edamame with the garlic butter mixture and top with a pinch of kosher salt and some sesame seeds. Serve immediately."
+ 	]
+},
+
+ingredients: id,
+instructions: id

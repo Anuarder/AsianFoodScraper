@@ -1,22 +1,8 @@
 const request = require('request');
 const cheerio = require('cheerio');
-const mysql = require('mysql');
+const fs = require('fs');
+
 const links = require('./links');
-
-const db = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'password',
-    database : 'asianFoodRecipes'
-});
-
-db.connect(err => {
-    if(err){
-        throw error;
-    }
-    console.log("MySql connected...");
-});
-
 
 let urls = links.chinese;
 let path = 'chinese';
@@ -50,8 +36,15 @@ function getURLData(path, urls){
             }else{
                 console.log(error);
             }
-        })
-    })
+        });
+    });
+}
+
+function getDataFromFile(file){
+    fs.readFile(file, 'utf8', (err, data) => {
+        let jsonData = JSON.parse(data);
+        setDataToDB(jsonData);
+    });
 }
 
 function setDataToDB(data){
