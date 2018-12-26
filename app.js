@@ -4,8 +4,8 @@ const fs = require('fs');
 
 const links = require('./links');
 
-let urls = links.chinese;
-let path = 'chinese';
+let path = 'thai';
+let urls = links[path];
 
 function getURLData(path, urls){
     urls.forEach(url => {
@@ -28,7 +28,8 @@ function getURLData(path, urls){
                     img: recipe_img,
                     time: recipe_time,
                     ingredients: recipe_ingredients,
-                    instructions: recipe_instructions
+                    instructions: recipe_instructions,
+                    category: path
                 }
                 let jsonData = JSON.stringify(data);
                 fs.appendFileSync(`JSON/${path}.json`, `${jsonData},\n`);
@@ -43,10 +44,8 @@ function getURLData(path, urls){
 function getDataFromFile(file){
     fs.readFile(file, 'utf8', (err, data) => {
         let jsonData = JSON.parse(data);
-        setDataToDB(jsonData);
+        console.log(jsonData);
     });
 }
 
-function setDataToDB(data){
-    console.log(data);
-}
+getURLData(path, urls);
