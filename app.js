@@ -1,10 +1,15 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const MongoClient = require('mongodb').MongoClient;
 
 const links = require('./links');
 
-let path = 'thai';
+
+const url = 'mongodb://localhost:27017';
+const mongoClient = new MongoClient(url, { useNewUrlParser: true });
+
+let path = 'japanese';
 let urls = links[path];
 
 function getURLData(path, urls){
@@ -40,12 +45,32 @@ function getURLData(path, urls){
         });
     });
 }
-
 function getDataFromFile(file){
     fs.readFile(file, 'utf8', (err, data) => {
+        if(err) throw err;
+
         let jsonData = JSON.parse(data);
         console.log(jsonData);
     });
 }
+function setDataToDB(file){
+    fs.readFile(file, 'utf8', (err, data) => {
+        if(err) throw err;
 
-getURLData(path, urls);
+        let jsonData = JSON.parse(data);
+        mongoClient.connect(function(err, client) {
+            if (err) throw err;
+            let db = client.db("AsianFood");
+            let collection = db.collection("Recipes");
+    
+            collection.insertMany(jsonData, function(err, res) {
+              if (err) throw err;
+              console.log(`Inserted ${res.insertedCount} documents`);
+              client.close();
+            });
+        });
+    });
+}
+
+
+// getDataFromFile(`JSON/${path}.json`);
