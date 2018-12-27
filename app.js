@@ -72,5 +72,6 @@ function setDataToDB(file){
     });
 }
 
-
+// getURLData(path, urls);
 // getDataFromFile(`JSON/${path}.json`);
+// setDataToDB(`JSON/${path}.json`);
