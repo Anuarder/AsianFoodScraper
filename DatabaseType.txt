@@ -17,8 +17,6 @@
  		"Bring a small pot of water to boil. Cook the edamame for 2-3 minutes. Drain and set aside.",
  		"Melt the salted butter by heating it up (you can heat it up in a microwave), then add the garlic, cayenne pepper and black pepper, stir to mix well.",
  		"Toss the edamame with the garlic butter mixture and top with a pinch of kosher salt and some sesame seeds. Serve immediately."
- 	]
-},
-
-ingredients: id,
-instructions: id
+ 	],
+  "category: "korean"
+}
